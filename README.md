@@ -8,7 +8,7 @@
 
 # PajakIn
 
-Sebuah aplikasi Android yang menghadirkan pengalaman perhitungan pajak yang personal dan mendunia. Tidak hanya mengenal budaya Indonesia dari Sabang sampai Merauke, PajakIn kini juga memahami keragaman sapaan dari seluruh penjuru dunia. Dari "Selamat datang" di Jakarta hingga "Hello" di New York, dari "Bonjour" di Paris hingga "Konnichiwa" di Tokyo - setiap pembukaan aplikasi adalah percakapan pertama yang menghargai keberadaan Anda di mana pun Anda berada.
+Sebuah aplikasi Android yang menghadirkan pengalaman perhitungan pajak yang personal dan mendunia. Tidak hanya mengenal budaya Indonesia dari Sabang sampai Merauke, PajakIn kini juga memahami keragaman sapaan dari seluruh penjuru dunia. Dari "Selamat datang" di Jakarta hingga "Hello" di New York, dari "Bonjour" di Paris hingga "ようこそ" di Tokyo - setiap pembukaan aplikasi adalah percakapan pertama yang menghargai keberadaan Anda di mana pun Anda berada.
 
 ## Fitur
 - **Splash Screen dengan Deteksi Lokasi**: Aplikasi menampilkan splash screen yang akan menampilkan sapaan berbeda berdasarkan lokasi pengguna (berdasarkan koordinat GPS).
