@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#AED7FF"
+    android:paddingLeft="24dp"
+    android:paddingRight="24dp"
+    android:paddingTop="32dp">
+
+    <!-- HEADER: Pajak.In dengan GRADIEN 3 WARNA -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginBottom="40dp">
+
+        <!-- Pajak.In dengan Text Gradient -->
+        <TextView
+            android:id="@+id/textTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pajak.In"
+            android:textSize="42sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-black"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Subtitle -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kalkulator Pajak Otomatis"
+            android:textSize="16sp"
+            android:textColor="#2E35FF"/>
+
+    </LinearLayout>
+
+    <!-- ===== BAGIAN INPUT HARGA ===== -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="32dp"
+        android:paddingHorizontal="16dp">
+
+        <!-- Label Input -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Input Nilai Harga"
+            android:textSize="18sp"
+            android:textColor="#2E35FF"
+            android:textStyle="bold"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Input Box -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal"
+            android:background="@drawable/input_box_blue"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rp"
+                android:textSize="18sp"
+                android:textColor="#2E35FF"
+                android:textStyle="bold"
+                android:layout_marginRight="12dp"/>
+
+            <EditText
+                android:id="@+id/editTextHarga"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="0"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:textColorHint="#80000000"
+                android:inputType="number"
+                android:background="@android:color/transparent"
+                android:padding="0dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- ===== BAGIAN PERSENTASE PAJAK ===== -->
+    <!-- SECTION: PERSENTASE PAJAK -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp"
+        android:paddingHorizontal="16dp"
+        android:gravity="center_vertical">
+
+        <!-- Label Persentase Pajak -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Persentase Pajak"
+            android:textSize="18sp"
+            android:textColor="#2E35FF"
+            android:textStyle="bold"/>
+
+        <!-- Scale Pajak di kanan -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Scale Pajak"
+            android:textSize="18sp"
+            android:textColor="#2E35FF"/>
+
+    </LinearLayout>
+
+    <!-- PERSENTASE DI TENGAH -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="24dp">
+
+        <TextView
+            android:id="@+id/textPersentase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0%"
+            android:textSize="48sp"
+            android:textColor="#2E35FF"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <!-- SeekBar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginBottom="40dp"
+        android:paddingHorizontal="16dp">
+
+        <SeekBar
+            android:id="@+id/seekBarPajak"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="50"
+            android:progress="0"
+            android:progressBackgroundTint="#0202FF"
+            android:progressTint="#FF00DD"
+            android:thumb="@drawable/seekbar_thumb"/>
+
+    </LinearLayout>
+
+    <!-- SECTION: HASIL PERHITUNGAN -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#FFFFFF"
+        android:padding="20dp"
+        android:elevation="4dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:clipToPadding="false">
+
+        <!-- Pajak Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Pajak"
+                android:textSize="18sp"
+                android:textColor="#2E35FF"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rp"
+                    android:textSize="16sp"
+                    android:textColor="#2E35FF"
+                    android:layout_marginRight="4dp"/>
+
+                <TextView
+                    android:id="@+id/textJumlahPajak"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="24sp"
+                    android:textColor="#2E35FF"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Garis Pemisah Tabel -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#0202FF"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Total Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Total"
+                android:textSize="20sp"
+                android:textColor="#2E35FF"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rp"
+                    android:textSize="18sp"
+                    android:textColor="#FF00DD"
+                    android:layout_marginRight="4dp"/>
+
+                <TextView
+                    android:id="@+id/textTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="28sp"
+                    android:textColor="#FF00DD"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Note: Harga + Pajak -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Harga + Pajak"
+            android:textSize="14sp"
+            android:textColor="#2E35FF"
+            android:layout_marginTop="4dp"
+            android:layout_gravity="end"/>
+
+    </LinearLayout>
+
+</LinearLayout>
